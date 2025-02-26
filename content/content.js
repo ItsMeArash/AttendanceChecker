@@ -69,7 +69,7 @@ setTimeout(() => {
 
     console.log("Data stored in Chrome storage");
 
-}, 1000);
+}, 2500);
 
 // Function to extract time (HH:MM) from string and convert to minutes
 function extractTime(timeString) {
