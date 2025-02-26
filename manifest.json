@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Attendance Tracker",
+    "version": "1.0",
+    "description": "محاسبه زمان حضور بر اساس داده‌های سامانه",
+    "permissions": ["storage", "alarms", "activeTab", "scripting"],
+    "host_permissions": ["*://hozoor.raydadportal.ir/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": {
+        "16": "icons/favicon-16x16.png",
+        "32": "icons/favicon-32x32.png",
+        "192": "icons/android-chrome-192x192.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://hozoor.raydadportal.ir/*"],
+        "js": ["content/content.js"]
+      }
+    ]
+  }
+  
