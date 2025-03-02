@@ -18,7 +18,7 @@
     },
     "content_scripts": [
       {
-        "matches": ["https://hozoor.raydadportal.ir/*"],
+        "matches": ["https://hozoor.raydadportal.ir/*", "http://192.168.12.31:9000/*"],
         "js": ["content/content.js"]
       }
     ]
