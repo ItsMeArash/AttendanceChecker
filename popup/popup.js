@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let statusMessage = document.getElementById("status-message");
         if (currentlyInside) {
             statusMessage.textContent = "You are currently inside the company.";
-            statusMessage.style.color = "red";
+            statusMessage.style.color = "green";
         } else {
             statusMessage.textContent = "";
         }

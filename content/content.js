@@ -1,11 +1,25 @@
 console.log("content.js loaded SUCCESSFULLY");
 console.log("extractAttendanceData invoked in content.js");
 
-setTimeout(() => {
+// const observer = new MutationObserver(() => {
+    setTimeout(() => {
     let ulElement = document.querySelector("ul.zp-timelineTraffic");
+    
+    if(!ulElement.children.length) {
+        console.log('WHU')
+        let newLi = document.createElement("li");
+        newLi.className = "zp-log-in d-flex align-items-center justify-content-between position-relative";
+        newLi.style.color = "orange";
+        newLi.style.fontWeight = "bold";
+        newLi.innerText = `امروز اصلا انگشت نزدی`;
+
+        // Insert at the beginning of the UL
+        ulElement.prepend(newLi);
+        return;
+    };
 
     if (!ulElement) {
-        console.error("UL element not found!");
+        console.error("404 UL element not found!");
         return;
     }
 
@@ -70,6 +84,8 @@ setTimeout(() => {
     console.log("Data stored in Chrome storage");
 
 }, 5000);
+// });
+// observer.observe(document.body, { childList: true, subtree: true });
 
 // Function to extract time (HH:MM) from string and convert to minutes
 function extractTime(timeString) {
@@ -82,7 +98,7 @@ function extractTime(timeString) {
 
 // Function to calculate allowed exit time
 function calculateAllowedExitTime(workMinutes) {
-    let remainingMinutes = 480 - workMinutes; // Time left to reach 8 hours
+    let remainingMinutes = 530 - workMinutes; // Time left to reach 8 hours
 
     let now = new Date();
     let currentMinutes = now.getHours() * 60 + now.getMinutes(); // Current time in minutes
