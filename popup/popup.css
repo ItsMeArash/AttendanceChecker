@@ -1,9 +1,25 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 10px;
-    width: 200px;
+body { 
+    font-family: 'Yekan', Arial, sans-serif; 
+    padding: 10px; 
+    width: 300px; 
+    font-size: .9rem;
 }
+
 #container {
     padding: 10px;
+}
+
+#work-sessions { 
+    list-style: none; 
+    padding: 0; 
+}
+
+#work-sessions li { 
+    padding: 5px; 
+    border-bottom: 1px solid #ccc; 
+}
+
+#status-message { 
+    font-weight: bold; 
+    margin-top: 10px; 
 }

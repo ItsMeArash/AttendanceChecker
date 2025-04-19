@@ -4,19 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Tracker</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 10px; width: 300px; }
-        #work-sessions { list-style: none; padding: 0; }
-        #work-sessions li { padding: 5px; border-bottom: 1px solid #ccc; }
-        #status-message { font-weight: bold; margin-top: 10px; }
-    </style>
+    <link href="http://cdn.font-store.ir/yekan.css" rel="stylesheet">
+    <link href="popup.css" rel="stylesheet">
 </head>
-<body>
-    <h2>Attendance Summary</h2>
-    <p id="total-time">Total Worked: --</p>
-    <p id="allowed-exit">Allowed Exit Time: --</p>
+<body dir="rtl">
+    <h2>حضور چک</h2>
+    <p id="total-time">کل حضور: --</p>
+    <p id="allowed-exit">پایان ساعت کاری: --</p>
     <p id="status-message"></p>
-    <h3>Work Sessions</h3>
+    <h3>بازه های زمانی حضور</h3>
     <ul id="work-sessions"></ul>
     <script src="popup.js"></script>
 </body>

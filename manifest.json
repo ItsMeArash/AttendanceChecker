@@ -3,24 +3,23 @@
     "name": "Attendance Tracker",
     "version": "1.0",
     "description": "محاسبه زمان حضور بر اساس داده‌های سامانه",
-    "permissions": ["storage", "alarms", "activeTab", "scripting"],
+    "permissions": ["storage", "alarms", "activeTab", "scripting", "notifications"],
     "host_permissions": ["*://hozoor.raydadportal.ir/*"],
     "background": {
-      "service_worker": "background.js"
+        "service_worker": "background.js"
     },
     "action": {
-      "default_popup": "popup/popup.html",
-      "default_icon": {
-        "16": "icons/favicon-16x16.png",
-        "32": "icons/favicon-32x32.png",
-        "192": "icons/android-chrome-192x192.png"
-      }
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "icons/favicon-16x16.png",
+            "32": "icons/favicon-32x32.png",
+            "192": "icons/android-chrome-192x192.png"
+        }
     },
     "content_scripts": [
-      {
-        "matches": ["https://hozoor.raydadportal.ir/*", "http://192.168.12.31:9000/*"],
-        "js": ["content/content.js"]
-      }
+        {
+            "matches": ["https://hozoor.raydadportal.ir/*", "http://192.168.12.31:9000/*"],
+            "js": ["content/content.js"]
+        }
     ]
-  }
-  
+}
